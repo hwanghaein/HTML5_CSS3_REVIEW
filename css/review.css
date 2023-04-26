@@ -1,0 +1,27 @@
+@import url(./normalize.css);
+@import url(./reset.css);
+
+body {
+  background: #ffc;
+  margin: 0;
+}
+
+.header {
+  background: pink;
+}
+
+.visual {
+  background: orange;
+}
+
+.main {
+  background: lightgreen;
+}
+
+.slogan {
+  background: skyblue;
+}
+
+.footer {
+  background: gray;
+}
