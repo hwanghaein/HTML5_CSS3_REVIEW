@@ -1,0 +1,1012 @@
+@import url(./fontello.css);
+@import url(./normalize.css);
+@import url(./reset.css);
+/* @import url(./module.css); */
+
+/* 숨김 콘텐츠 */
+.a11y-hidden, legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+/* 기본 스타일 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+
+/* 링크 스타일 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* 본문 스타일 */
+body {
+  color: #212121;
+  font-size: 1.4rem;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+               BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+              "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+               "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  background: url("./images/bg_flower.png") no-repeat 50% 0,
+             #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%)
+             repeat 0 0;
+  }
+
+
+/* 레이아웃 */
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
+  width: 940px;
+  margin: 0 auto;
+}
+
+
+/* 헤더 */
+.header {
+  background: #fff;
+  padding: 0 30px;
+  border-radius: 0 0 15px 15px;
+  position: relative;
+}
+
+
+/* 로고 (Web Cafe) */
+.logo {
+  position: absolute;
+  top: 45px;
+  left: 60px;
+  z-index: 1;
+}
+
+
+/* 텍스트 링크 모음 */
+.member {
+  text-align: right;
+  padding: 4px 0;
+  transform: translateX(10px);
+}
+
+/* 텍스트 링크 모음 (리스트 아이템 부분) */
+.member li {
+  display: inline-block;
+}
+
+/* 텍스트 링크 모음 (하이퍼링크 부분)  */
+.member a {
+  padding: 6px 10px;
+  display: inherit;
+  text-transform: uppercase;
+}
+
+/* 로그인, 회원가입, 사이트맵, english */
+.divider {
+  margin-right: 4px;
+}
+
+
+/* 메인 메뉴 (navigation 클래스) */
+.navigation {
+  padding-bottom: 40px;
+}
+
+/* 메인메뉴 (menu 클래스) */
+.menu {
+  border-top: 2px solid currentColor;
+  background: #e85e2c
+    linear-gradient(
+      to bottom,
+      #ef9126 0%,
+      #e85e2c 35%,
+      #e85e2c 70%,
+      #ef9126 100%
+    );
+  border-radius: 0 0 5px 5px;
+  padding-left: 230px;
+  height: 47px;
+  position: relative;
+}
+
+
+
+/* 메인메뉴 아이템 (menu-item 클래스)*/
+.menu-item {
+  float: left;
+  border-left: 2px solid #fff;
+}
+
+/* 메인메뉴 버튼 (menu-button 클래스) */
+.menu-button {
+  border: 0;
+  background: transparent;
+  padding: 0 23px;
+  line-height: 45px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+
+/* 메인메뉴 버튼 마우스 대면 노란색으로 바뀌게하기 */
+.is-active .menu-button {
+  color: #ff0;
+}
+
+/* 메인메뉴 버튼 밑에 검은색 밑줄 생기게 하기 */
+.is-active .menu-button::after {
+  content: "";
+  display: block;
+  border-top: 2px solid #000;
+}
+
+/* 서브메뉴 (sub-menu 클래스) */
+.sub-menu {
+  position: absolute;
+  top: 47px;
+  padding: 4px 0;
+  display: none;
+}
+
+/* 메인메뉴 버튼 앞 3개의 앞부분 기준으로 서브메뉴들이 배치되게끔 */
+.menu > li:nth-child(-n + 3) {
+  position: relative;
+}
+
+/* 서브메뉴 앞 3개는 왼쪽 기준으로 배열 */
+.menu-html,
+.menu-css,
+.menu-standards {
+  left: 0;
+}
+
+/* 서브메뉴 뒤 3개는 오른쪽 기준으로 배열 */
+.menu-accessibility,
+.menu-qna,
+.menu-archive {
+  right: 0;
+}
+
+/* 서브메뉴들을 가로로 줄바꿈 안되게끔 배열하기 */
+.is-active .sub-menu {
+  display: block;
+  white-space: nowrap;
+}
+
+/* 서브메뉴 개별 list item 부분을 인라인블록으로 바꿔주기 */
+.sub-menu li {
+  display: inline-block;
+}
+
+/* 서브메뉴 개별 하이퍼링크 부분 앞쪽에 아이콘 추가 */
+.sub-menu a::before{
+  content: '\e804';
+  font-family: 'fontello';
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+/* 서브메뉴 개별 하이퍼링크에 마우스 대면 다른 아이콘으로 바뀌게 */
+.sub-menu a:hover::before,
+.sub-menu a:focus::before{
+  content: '\e800';
+}
+
+
+/* 서브메뉴 개별 하이퍼링크를 인라인블록으로 바꾸고 박스 크기 설정하기 */
+.sub-menu a{
+  display: inline-block;
+  padding: 6px 0;
+}
+
+/* 서브메뉴 개별 하이퍼링크에 마우스 대면 빨간색으로 바뀌게 */
+.sub-menu a:hover,.sub-menu a:focus {
+  color: #f00;
+}
+
+/* 비주얼 부분 텍스트(Web Standards & Accessibility) 움직이는 애니메이션 만들기 */
+
+@keyframes moveEffect {
+0% {
+  font-size: 12px;
+  color:rgba(0,0,0,0);
+  transform: translate(0,0);
+}
+100% {
+  font-size: 24px;
+  color: rgba(0,0,0,1);
+  transform: translate(400px,75px);
+}
+}
+
+@keyframes fadeEffect{
+  0%{ opacity: 1;}
+  100%{ opacity: 0;}
+}
+
+/* 비주얼 전체 배경 부분 */
+.visual {
+  height: 120px;
+  position: relative;
+}
+
+/* 1,2,3,4번 배경 꽃 이미지 */
+.visual::before,
+.visual::after {
+content:"";
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+animation: fadeEffect 2000ms infinite alternate;
+}
+
+/* 1,3번 꽃 이미지 */
+.visual::before {
+background: url("./images/ani_flower_01.png") no-repeat 0 -10px,
+url("./images/ani_flower_02.png") no-repeat 600px 0;
+}
+
+/* 2,4번 꽃 이미지 */
+.visual::after {
+  background: url("./images/ani_flower_03.png") no-repeat 300px 0,
+  url("./images/ani_flower_04.png") no-repeat 800px 0;
+  animation-delay: 1000ms;
+}
+
+/* 비주얼 부분 텍스트(Web Standards & Accessibility) 글꼴과 애니메이션 효과 추가*/
+.visual-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  animation: moveEffect 400ms ease-in-out forwards;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* 메인 */
+.main {
+  display: flow-root;
+  background: #fff;
+  min-height: 450px;
+  padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
+}
+
+.group {
+  margin: 0 15px;
+  float: left;
+}
+
+.group1 {
+  width: 250px;
+}
+.group2 {
+  width: 380px;
+}
+.group3 {
+  width: 190px;
+}
+
+/* 로그인 전체 영역 주황색 영역 */
+.login{
+  box-shadow:5px 5px 0 0 #ccc;
+  background: orange radial-gradient(circle at right top, orange, orangered);
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+
+/* 로그인 타이틀 노란 글자 */
+.login-title{
+  color: #ff0;
+  font-size: 15px;
+  font-weight: 700;
+  text-indent: 10px;
+}
+
+/* 로그인 하얀 배경 폼 부분 */
+.login-form{
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+
+/* 아디, 비번 2줄 합친 부분 */
+.user-email,
+.user-pw{
+margin-bottom: 5px;
+}
+
+
+/* 필드셋 (아디+비번+버튼 합친 네모난 영역) */
+.login-form fieldset{
+position:relative;
+border-bottom: 1px solid #aaa;
+padding-bottom: 5px;
+}
+
+
+/* 아디,비번 라벨 부분 */
+.login-form label{
+display: inline-block;
+width: 4em;
+}
+
+
+/* 아디,비번 입력창 부분 */
+.login-form input{
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+  border-radius: 3px;
+}
+
+/* 로그인 주황 버튼 부분 */
+.login-button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 53px;
+  background-color: orangered;
+  color:#fff;
+  border: 0;
+  padding: 0 8px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+
+
+/* sign 영역 흰색 부분 */
+.sign{
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 4px 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+/* 회원가입+아이디비번찾기 각 a태그 */
+.sign a{
+  display: block;
+  padding: 6px 0;
+  letter-spacing: -1px;
+}
+
+/* 회원가입+아이디비번찾기 앞에 돋보기 아이콘 추가 */
+.sign a::before{
+  content: '\e805';
+  font-family: 'fontello';
+  margin-right: 8px;
+  color: orangered;
+}
+
+
+/* 유효성 검사 배너 영역*/
+.validation-list{
+background: #fff;
+margin-top: 25px;
+}
+
+
+/* 유효성 검사 배너 list 2개 (W3C,CSS) */
+.validation-list li{
+  margin-top: 10px;
+}
+
+/* 유효성 검사 배너 list 2개 각 a태그 */
+.validation-list li a{
+  display: block;
+  background: url("./images/validation_icon.png") no-repeat 25px 50%,
+  #ccc linear-gradient(to bottom, #ccc, #eee);
+  padding: 8px 15px 8px 55px;
+  border-radius: 30px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+/* 유효성 검사 배너 list 마우스 대면 빨간색으로 */
+.validation-list a:hover, 
+.validation-list a:focus{
+color:#f00
+}
+
+/* 웹관련용어 영역 회색부분 */
+.term{
+  margin-top: 20px;
+  border:1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background:#ccc linear-gradient(to bottom, #ccc, #eee);
+}
+
+/* "웹관련용어" 글자 */
+.term-title{
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* 웹관련 용어 제목 밑에 내용 부분 */
+.term-list {
+  margin-top: 10px;
+}
+
+/* 내용 덩어리 2개 */
+.term-list div{
+  margin-top: 10px;
+  display: flow-root;
+}
+
+/* 내용 안에 "웹표준이란?"이랑 요약내용부분 */
+.term-list-subject, .term-list-brief{
+  float: right;
+  width: 145px;
+}
+
+/* "웹표준이란?" 글자 */
+.term-list-subject{
+ color: #296897;
+ font-weight: 500;
+}
+
+/* W3C 썸네일 이미지 왼쪽으로가게 */
+.term-list-thumbnail{
+  float: left;
+}
+
+/* W3C 썸네일 이미지 중간 배열 */
+.term-list-thumbnail img{
+  vertical-align: middle;
+}
+
+/* 요약내용부분 */
+.term-list-brief{
+margin-top: 5px;
+line-height: 1.5;
+}
+
+/* 내용 덩어리 2개중에 밑에꺼중에 제목이랑 요약내용 */
+.cross .term-list-subject,
+.cross .term-list-brief{
+  float: left;
+}
+
+/* 내용 덩어리 2개중에 밑에꺼중에 썸네일 이미지 */
+.cross .term-list-thumbnail{
+  float: right;
+}
+
+
+/* 검색 폼 영역 회색부분*/
+.search-form{
+  background:#ccc linear-gradient(to bottom, #ccc, #eee);
+  border:1px solid #aaa;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px 10px;
+}
+
+/*자료검색부터 검색버튼까지 전체영역*/
+.search-form-inner{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/*자료검색부터 검색버튼 '전'까지 영역*/
+.form-group{
+ flex-grow: 1;
+ display: flex;
+ flex-flow: row nowrap;
+ align-items: center;
+ padding-right: 10px;
+}
+
+/* "자료검색" */
+.form-group-label{
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+/* 검색창 입력 부분 */
+.form-group-input{
+ border: 1px solid #aaa;
+ border-radius: 3px;
+ height: 24px;
+ padding: 1px 1px 1px 5px;
+ flex-grow: 1;
+ min-width: 0;
+ width: 100%;
+ font-size: 1.2rem;
+}
+
+/* 검색버튼 */
+.search-button{
+  flex-shrink: 0;
+  background-color: #000;
+  color:#fff;
+  height: 24px;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 12px; 
+}
+
+
+/* "공지사항+자료실+내용리스트+더보기" 전부 영역 */
+.board{
+  margin-top: 20px;
+  position: relative;
+}
+
+/* 공지사항탭+자료실탭 가로로 길게 더보기까지 영역  */
+.tab-list{
+  display: flex;
+  flex-flow: row nowrap;
+  }
+
+  /* 자료실 탭 버튼 (선택 안된 일반 상태 ⇒회색바탕에 회색글자) */
+  .tab{
+    border: 1px solid #aaa;
+    background-color: #ccc;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 10px;
+    color: #666;
+  }
+
+  /* 공지사항 탭 버튼 (선택된 상태로 만들기 ⇒흰색바탕에 주황글자)*/
+  .is-select.tab {
+    background-color: #fff;
+    color: #e85e2c;
+    border-color: currentColor currentColor #fff currentColor;
+  }
+
+
+  /* 탭 선택하면 나오는 것들 (공지사항/자료실 내용리스트 박스 2개) */
+.tab-panel{
+  display: none;
+ margin-top: 15px;
+}
+
+/* 공지사항 탭 선택하면 나오는 것들 (공지사항 내용리스트+더보기) */
+.is-select.tab-panel {
+  display: block;
+}
+
+
+/* 밑에 각각 리스트들 (내용+시간)*/
+.board-list li{
+margin-top: 10px;
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-between;
+}
+
+/* 밑에 각각 리스트들의 a태그 (선택되는 부분) */
+.board-list a{
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 리스트들 오른쪽 날짜 */
+.board-list time{
+flex-shrink: 0;
+margin-left: 10px;
+}
+
+/* (공지사항+자료실) 더보기 */
+.board-more {
+position: absolute;
+top: -8px;
+right: -8px;
+padding: 8px;
+}
+
+/* 더보기 앞에 플러스 아이콘 */
+.icon-plus::before{
+  color: darkgreen;
+}
+
+/* 새소식 전체 섹션 */
+.news{
+  margin-top: 20px;
+  position:relative;
+}
+
+/* 새소식 글자 밑에 회색줄*/
+.news::before{
+  content:"";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #aaa linear-gradient(to right, #ccc, #fff);
+}
+
+/* "새소식" 글자 타이틀 부분 */
+.news-title{
+ color:#e85e2c;
+ font-size: 15px;
+ font-weight: 700;
+}
+
+/* 새소식 밑에 영역 (썸네일+내용) 전부 하이퍼링크 처리 */
+.news-link {
+  display:block;
+}
+
+/* 새소식 밑에 영역 (썸네일+내용) 전부 */
+.news-item{
+  margin-top: 35px;
+  padding-left: 130px;
+  position: relative;
+}
+
+/* 새소식의 소제목 ("W3C 사이트가 리뉴얼 되었습니다") */
+.news-item-title{
+  font-weight: 500;
+}
+
+/* 날짜 */
+.news-item-date{
+display: block;
+margin: 5px 0 10px;
+}
+
+/* 본문내용 */
+.news-item-brief{
+line-height: 1.5;
+}
+
+/* 썸네일이미지+ "WCW리뉴얼" 합친 부분 */
+.news-item-thumbnail{
+  /* background-color: gold; */
+  position: absolute;
+  top:2px;
+  left:0;
+  text-align: center;
+}
+
+/* news-item-thumbnail 클래스 안에 있는 썸네일 img */
+.news-item-thumbnail img{
+  box-shadow: 0 15px 10px 5px #ccc;
+  margin-bottom: 15px;
+}
+
+/* 더보기 부분 */
+.news-more{
+position: absolute;
+top: -8px;
+right: -8px;
+padding: 8px;
+}
+
+
+/* 회색 그라디언트 class */
+.gradient-effect{
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* 오렌지 강조색 class */
+.accent-color{
+  color:#e85e2c
+}
+
+/* 텍스트 사이즈,굵기 class */
+.text-xl{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+/* 신규이벤트 전체 섹션  */
+.event{
+  border-bottom: 1px solid #aaa;
+}
+
+/* “신규이벤트” 글자 부분 */
+.event-title{
+  display: inline-block;
+}
+
+/* 2개의 버튼 (이전이벤트보기, 다음이벤트보기)을 묶음 */
+.event-button-wrapper{
+  height: 20px;
+  overflow: hidden;
+  display: flex; 
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px;
+  float: right;
+}
+
+/* 버튼이미지*/
+.event-button{
+  /* background-color: blue; */
+  width: 19px;
+  height: 18px;
+  border: 0;
+  padding: 18px 0 0 0;
+  background: url(./images/back_forward.png) no-repeat;
+}
+
+/* "다음 이벤트 보기" 버튼 */
+.event-button-next{
+  background-position: -36px 0;
+}
+  
+/*Tab키 눌렀을때 아웃라인 잘보이게*/
+.event-button:focus{
+  outline-offset: -2px;
+}
+
+/*썸네일, 내용설명 위아래 여백*/
+.event-thumbnail, .event-brief{
+margin: 10px 0;
+}
+
+/* 썸네일이미지 */
+.event-thumbnail img{
+  border:1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
+
+/* 내용설명 부분*/
+.event-brief{
+  line-height: 1.5;
+}
+
+/* 관련사이트 영역 전체 */
+.related{
+  margin-top: 10px;
+}
+
+
+/* 관련사이트 밑에 펼쳐지는 흰색영역 */
+.related-list{
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 27px;
+  overflow: hidden;
+  transition: height 400ms 0ms, padding 400ms 400ms;
+}
+
+/* 하위 리스트들 전체  */
+.related-list li{
+  height: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 5px;
+}
+
+/* 각각의 개별 리스트  */
+.related-list a{
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+/* 마우스 대서 길어지고 난 후의 부분 */
+.related-list:hover, .related-list:focus{
+  height: 147px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* margin 클래스 */
+.margin-top-default{margin-top: 20px;}
+.margin-top-thin{margin-top: 5px;}
+.margin-top-normal{margin-top: 10px;}
+.margin-top-large{margin-top: 15px;}
+.margin-top-10{margin-top: 10px;}
+.margin-top-15{margin-top: 15px;}
+
+/* 인기사이트 영역 전체 */
+.favorite{
+  position: relative;
+}
+
+/* 목록 전체 박스 부분 */
+.favorite-list{
+  background: yellow;
+ list-style-type: none;
+}
+
+/* 목록 개별 리스트들 */
+.favorite-list li{
+  margin-top: 10px;
+  counter-increment: number;
+  background-color: pink;
+  display: flex;
+  flex: row nowrap;
+  align-items: center;
+}
+
+/* 리스트들 앞에 숫자 꾸미기 */
+.favorite-list li::before{
+content: counter(number);
+background-color: #aaa;
+color: #fff;
+font-size: 1.2rem;
+margin-right: 5px;
+border-radius: 3px;
+display: inline-block;
+width: 1.5em;
+text-align: center;
+line-height: 1.5;
+}
+
+
+
+/* em태그 영역->박스로 만듦 (화살표) */
+.up, .stop, .down{
+  display: inline-block;
+  width: 20px;
+  height: 11px;
+  margin-left: auto;
+  background:lime url(./images/rank.png) no-repeat 100% 0%;  
+}
+ 
+/* -만 */
+.stop{
+background-position: 100% 48%;
+}
+
+/* ↓만 */
+.down{
+  background-position: 100% 100%;
+}
+
+
+/* 인기사이트 더보기 */
+.favorite-more{
+/* background-color: green;   */
+position: absolute;
+top: -8px;
+right: -8px;
+padding: 8px;
+}
+
+
+
+/* 슬로건 전체 영역 */
+.slogan {
+  background: skyblue;
+  clear: both;
+position: relative;
+padding: 15px 100px 15px 180px;
+}
+
+/* "슬로건" 글자 */
+.slogan-title{
+  background-color: pink;
+  width: 110px;
+  height: 83px;
+  line-height: 83px;
+  text-align: center;
+  position: absolute;
+  bottom: -25px;
+  left: 35px;
+}
+
+/* 커피잔 이미지 넣기 */
+.slogan-title::before{
+content:"";
+position:absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: url("images/coffee.png") no-repeat 0 0;
+}
+
+/* 슬로건 안에 인용구 (The power~) */
+.slogan-content{
+  color: #a09784;
+}
+
+/* 인용구 앞 따옴표 */
+.slogan-content q::before{
+  display: inline-block;
+  font-size: 3rem;
+  transform: translateY(10px);
+  }
+
+/* 인용구 뒤 따옴표 */
+.slogan-content q::after{
+content: "";
+}
+
+
+
+/* 푸터 */
+.footer {
+  background: #ccc
+    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
+    /* display: flex;
+    flex-flow: row nowrap; */
+}
+
+/* 푸터 안쪽 영역 */
+.footer-inner {
+  background: pink;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* 웹카페 로고 부분 */
+.footer-logo{
+  background: aqua;
+  width: 150px;
+  padding: 20px 0 0 35px;
+}
+
+/* 가이드메뉴바, 주소, 저작권 전체 영역  */
+.footer-inner-wrapper{
+  background: lime;
+  flex: 1 1 auto;
+}
+
+/* 가이드메뉴바 */
+.guide-list {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #7b8385;
+  color: #fff;
+  padding: 4px 45px;
+  justify-content: space-between;
+  text-transform: uppercase;
+  border-radius: 30px;
+}
+
+/* 가이드메뉴바 개별 리스트의 a태그 */
+.guide-list a {
+  display: block;
+  padding: 6px 10px;
+}
+
+/* 주소, 저작권 */
+.address,
+.copyright {
+  background-color: #f00;
+  display: block;
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
