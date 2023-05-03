@@ -306,6 +306,120 @@ margin: 0 auto;
   width: 190px;
 }
 
+
+
+/* 로그인 */
+.login {
+  background: #ed552f radial-gradient(circle at right top, #e8852e, #ed552f);
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 0 #aaa;
+  padding: 10px;
+}
+
+.login-title {
+  color: #ff0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-indent: 10px;
+}
+
+.login-form,
+.sign {
+  background: #fff;
+}
+
+.login-form {
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+
+.login-form fieldset {
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 4px;
+}
+
+.login-form div {
+  margin-bottom: 6px;
+}
+
+.login-form label {
+  display: inline-block;
+  width: 4em;
+}
+
+.login-form input {
+  width: 90px;
+  height: 22px;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  padding: 2px 2px 2px 6px;
+}
+
+.login-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  background: #ed552f;
+  border-radius: 2px;
+  border: 0;
+}
+
+.sign {
+  border-radius: 0 0 5px 5px;
+  padding: 4px 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+.sign a {
+  padding: 4px 0;
+}
+
+.sign .icon-right-open {
+  color: #e85e2c;
+}
+
+/* 유효성 검사 배너 */
+.validation-list {
+  margin-top: 25px;
+  /* display: flex;
+  flex-flow: column nowrap; */
+}
+
+.validation-list li {
+  margin-top: 10px;
+}
+
+.validation-list a {
+  display: block;
+  background: url(./images/validation_icon.png) no-repeat 20px 50%,
+    linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  padding: 10px 10px 10px 40px;
+  border-radius: 20px;
+}
+
+.validation-list a:hover,
+.validation-list a:focus {
+  color: #f00;
+}
+
+
+
+
+
+
+
+
 /* 슬로건 */
 .slogan {
   background: skyblue;
